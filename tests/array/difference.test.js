@@ -22,7 +22,6 @@ describe('difference', () => {
 
         function difference (arr, ...filters) {
             const filter = filters.reduce((acc, next) => acc.concat(next));
-            console.log(filter);
             return arr.reduce((acc, next) => filter.includes(next) ? acc : acc.push(next) && acc, []);
         }
 
